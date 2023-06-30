@@ -37,8 +37,8 @@ jobs:
    - name: check application logs
      run: |
        pm2 logs --lines 15 --raw > logs.txt &
-       sleep 10s  # Adjust the duration as per your requirement
-       pm2 kill
-       pm2 flush
+     #sleep 10s  # Adjust the duration as per your requirement
+      #pm2 kill
+      #pm2 flush
    
 
