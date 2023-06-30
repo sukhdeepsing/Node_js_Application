@@ -36,6 +36,6 @@ jobs:
      run: pm2 status
    - name: check application logs
      run: |
-          pm2 logs --lines 15
+           timeout 10s pm2 logs --lines 15
 
 
