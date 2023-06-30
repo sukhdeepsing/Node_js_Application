@@ -14,10 +14,10 @@ jobs:
           sudo apt-get install -y nodejs
           node --version
           npm --version
-Installing_pm2_and_deploy_application:
-  needs: [build]
-  runs-on: self-hosted
-  steps:
+  Installing_pm2_and_deploy_application:
+   needs: [build]
+   runs-on: self-hosted
+   steps:
    - name: Checkout code
      uses: actions/checkout@v3
    - name: PM2 installation & Verify
