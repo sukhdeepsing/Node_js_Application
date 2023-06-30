@@ -36,7 +36,7 @@ jobs:
      run: pm2 status
    - name: check application logs
      run: |
-        pm2 logs
-        pm2 flush
+        pm2 logs index.js
+        exit
    
 
