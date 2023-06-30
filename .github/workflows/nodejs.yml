@@ -34,4 +34,6 @@ jobs:
       pm2 start index.js --name "my-node-app"
    - name: Check application status
      run: pm2 status
+   - name: check application logs
+     run: pm2 logs
 
