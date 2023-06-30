@@ -34,11 +34,16 @@ jobs:
       pm2 start index.js --name "my-node-app"
    - name: Check application status
      run: pm2 status
+#    - name: check application logs
+#      run: |
+#        pm2 logs --lines 15 --raw > logs.txt &
+#      #sleep 10s  # Adjust the duration as per your requirement
+#       #pm2 kill
+#       #pm2 flush
+   
    - name: check application logs
      run: |
-       pm2 logs --lines 15 --raw > logs.txt &
-     #sleep 10s  # Adjust the duration as per your requirement
-      #pm2 kill
-      #pm2 flush
-   
-
+       pm2 logs --no-merge --lines 15 &
+       sleep 10s  # Adjust the duration as per your requirement
+       kill $!
+       pm2 flush
