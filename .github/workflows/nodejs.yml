@@ -35,5 +35,8 @@ jobs:
    - name: Check application status
      run: pm2 status
    - name: check application logs
-     run: pm2 logs
+     run: |
+        pm2 logs
+        pm2 flush
+   
 
