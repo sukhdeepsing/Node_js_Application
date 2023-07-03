@@ -59,9 +59,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Push Docker image
       run: |
-        docker login -usukhdeep@arintech.in -p ${{ secrets.DOCKER_PASSWORD }} arintech02.jfrog.io
-        docker tag my-node-app:latest arintech02.jfrog.io/artifactory/my-jforg-repository/my-node-app:latest
-        docker push arintech02.jfrog.io/artifactory/my-jforg-repository/my-node-app:latest
+        sudo docker login -usukhdeep@arintech.in -p ${{ secrets.DOCKER_PASSWORD }} arintech02.jfrog.io
+        sudo docker tag my-node-app:latest arintech02.jfrog.io/artifactory/my-jforg-repository/my-node-app:latest
+        sudo docker push arintech02.jfrog.io/artifactory/my-jforg-repository/my-node-app:latest
 
    
 
