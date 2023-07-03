@@ -39,8 +39,6 @@ jobs:
       pm2 start index.js --name "my-node-app"
    - name: Check application status
      run: pm2 status
-   - name: check application logs
-     run: |
-           timeout 10s pm2 logs --lines 15
+   
 
 
