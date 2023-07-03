@@ -39,6 +39,19 @@ jobs:
       pm2 start index.js --name "my-node-app"
    - name: Check application status
      run: pm2 status
+  Create_Docker_image:
+   needs: [Installing_pm2_and_deploy_application]
+   runs-on: self-hosted
+   steps: 
+   - name: Checkout code
+     uses: actions/checkout@v3
+   - name: build image
+     run: |           
+          sudo docker build /home/ubuntu/actions-runner/_work/Node_js_Application/Node_js_Application --tag my-node-app
+   - name: check docker images
+     run: |           
+          sudo docker images
+
    
 
 
